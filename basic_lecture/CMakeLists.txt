@@ -204,3 +204,9 @@ include_directories(
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
+
+add_executable(basic_simple_talker src/basic_simple_talker.cpp)
+add_executable(basic_simple_listener src/basic_simple_listener.cpp)
+
+target_link_libraries(basic_simple_talker ${catkin_LIBRARIES})
+target_link_libraries(basic_simple_listener ${catkin_LIBRARIES})
